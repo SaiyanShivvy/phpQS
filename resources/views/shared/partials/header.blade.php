@@ -19,9 +19,6 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
-            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-user-circle"></i> User
@@ -30,9 +27,13 @@
                     <a class="dropdown-item" href="#">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Log Out</a>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
+            </li>
+
         </ul>
 
         <!-- <form class="form-inline my-2 my-lg-0">
