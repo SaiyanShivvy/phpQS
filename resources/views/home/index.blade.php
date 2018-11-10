@@ -1,8 +1,5 @@
 @extends('shared.layouts.master')
-@section('title',"Home")
-{{--Header Here--}}
-{{--Subheader--}}
-{{--Content--}}
+@section('title','Home')
 @section('content')
     <section class="hero text-center">
         <br/>
@@ -11,11 +8,11 @@
         <br/>
         <h2 >
             <strong>
-                Hey! Welcome to MC- Mykey's Store
+                Welcome to Quality Souvenir's
             </strong>
         </h2>
         <br>
-        <a href="#"><button class="button large">Check out My Shirts</button></a>
+        <a href="{{url('/products')}}"><button class="button large">Check out the Products</button></a>
     </section>
     <br/>
     <div class="subheader text-center">
@@ -36,7 +33,7 @@
                         <img src="http://i.imgur.com/Mcw06Yt.png"/>
                     </a>
                 </div>
-                <a href="#">
+                <a href="{{route('product')}}">
                     <h3>
                         Kickin with Kraken Tee
                     </h3>

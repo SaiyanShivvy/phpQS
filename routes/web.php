@@ -11,20 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/', 'IndexController@index')->name('index');
+Route::get('/about', 'IndexController@about')->name('about');
+Route::get('/contact', 'IndexController@contact')->name('contact');
+Route::get('/product', 'IndexController@product')->name('product');
+Route::get('/products', 'IndexController@products')->name('products');
+
+// Auth Created Routes
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// Edited Auth Routes
+Route::group(['prefix' => 'admin','middleware' => 'auth'], function() {
+    Route::get('/', function(){
+        return view('admin.index');
+    })->name('admin.index');
 });
-
-Route::get('/index', function(){
-    return view('home.index');
-});
-
-Route::get('/about', function (){
-    return view('home.about');
-});
-
-Route::get('/contact', function (){
-    return view('home.contact');
-});
-
-
