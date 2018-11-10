@@ -11,6 +11,7 @@ class ProductTableSeeder extends Seeder
      */
     public function run()
     {
+        $faker = Faker\Factory::create();
         //'name', 'description', 'price', 'stock', 'supplier_id', 'category_id', 'image'
         $product = new \App\Products([
            'name' => 'Maori Gift 1',
@@ -19,7 +20,7 @@ class ProductTableSeeder extends Seeder
            'stock' => 99,
            'supplier_id' => 1,
            'category_id' => 1,
-           'image' => '...'
+           'image' => asset('public/storage/images/maori-dummy.jpg'),
         ]);
         $product->save();
 
@@ -30,7 +31,7 @@ class ProductTableSeeder extends Seeder
             'stock' => 99,
             'supplier_id' => 1,
             'category_id' => 2,
-            'image' => '...'
+            'image' => asset('public/storage/images/t-shirt-dummy.jpg'),
         ]);
         $product->save();
 
@@ -41,7 +42,7 @@ class ProductTableSeeder extends Seeder
             'stock' => 99,
             'supplier_id' => 1,
             'category_id' => 3,
-            'image' => '...'
+            'image' => asset('public/storage/images/maori-dummy.jpg'),
         ]);
         $product->save();
 
@@ -52,7 +53,7 @@ class ProductTableSeeder extends Seeder
             'stock' => 99,
             'supplier_id' => 1,
             'category_id' => 4,
-            'image' => '...'
+            'image' => asset('public/storage/images/ping-dummy.jpg'),
         ]);
         $product->save();
     }
