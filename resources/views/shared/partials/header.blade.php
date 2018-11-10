@@ -1,3 +1,6 @@
+<!-- CSRF Token -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="{{route('index')}}">
         {{--<img src="/resources/assets/images/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">Quality Souvenirs--}}
@@ -18,24 +21,43 @@
                 <a class="nav-link" href="{{route('about')}}">About</a>
             </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user-circle"></i> User Management
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{route('register')}}">Sign-up</a>
-                    <a class="dropdown-item" href="{{route('login')}}">Sign-in</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{route('logout')}}">Log-out</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Shopping Cart
-                    {{--<span class="alert badge">0</span>--}}
-                </a>
-            </li>
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Authentication Links -->
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        @if (Route::has('register'))
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        @endif
+                    </li>
+                @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
 
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
+                {{-- Shopping Cart --}}
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Shopping Cart
+                        {{--<span class="alert badge">0</span>--}}
+                    </a>
+                </li>
         </ul>
         {{--<form class="form-inline my-2 my-lg-0">--}}
           {{--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">--}}
