@@ -18,8 +18,6 @@
 Route::get('/', 'IndexController@index')->name('index');
 Route::get('/about', 'IndexController@about')->name('about');
 Route::get('/contact', 'IndexController@contact')->name('contact');
-Route::get('/product', 'IndexController@product')->name('product');
-Route::get('/products', 'IndexController@products')->name('products');
 
 // Auth Created Routes
 Auth::routes();
@@ -32,3 +30,14 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function() {
         return view('admin.index');
     })->name('admin.index');
 });
+
+// Products
+Route::get('/products', [
+    'uses' => 'ProductsController@index',
+    'as' => 'store.products'
+]);
+
+Route::get('/product', [
+    'uses' => 'ProductsController@viewDetails',
+    'as' => 'store.product'
+]);

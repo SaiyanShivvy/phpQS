@@ -11,7 +11,7 @@ class ProductTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker\Factory::create();
+        //$faker = Faker\Factory::create();
         //'name', 'description', 'price', 'stock', 'supplier_id', 'category_id', 'image'
         $product = new \App\Products([
            'name' => 'Maori Gift 1',
@@ -20,7 +20,7 @@ class ProductTableSeeder extends Seeder
            'stock' => 99,
            'supplier_id' => 1,
            'category_id' => 1,
-           'image' => asset('public/storage/images/maori-dummy.jpg'),
+           'image' => 'https://i.pinimg.com/originals/dc/42/4f/dc424f715a16dc74724859560daa48eb.jpg',
         ]);
         $product->save();
 
@@ -31,7 +31,7 @@ class ProductTableSeeder extends Seeder
             'stock' => 99,
             'supplier_id' => 1,
             'category_id' => 2,
-            'image' => asset('public/storage/images/t-shirt-dummy.jpg'),
+            'image' => 'https://www.giftsnz.com/photogallery/tshirts/DSCN3157l.jpg',
         ]);
         $product->save();
 
@@ -42,7 +42,7 @@ class ProductTableSeeder extends Seeder
             'stock' => 99,
             'supplier_id' => 1,
             'category_id' => 3,
-            'image' => asset('public/storage/images/maori-dummy.jpg'),
+            'image' => 'https://images-na.ssl-images-amazon.com/images/I/51kK2dEcMLL._SX466_.jpg',
         ]);
         $product->save();
 
@@ -53,7 +53,7 @@ class ProductTableSeeder extends Seeder
             'stock' => 99,
             'supplier_id' => 1,
             'category_id' => 4,
-            'image' => asset('public/storage/images/ping-dummy.jpg'),
+            'image' => 'https://www.shopnz.com/public/img/site/shopnz-com/s/par-047-kiwi-and-nz-map-pinback-badge-1224361.jpg',
         ]);
         $product->save();
     }

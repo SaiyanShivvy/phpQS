@@ -17,7 +17,7 @@
     <br/>
     <div class="subheader text-center">
         <h2>
-            MyKey&rsquo;s Latest Products
+           Latest Products
         </h2>
     </div>
 
@@ -33,7 +33,7 @@
                         <img src="http://i.imgur.com/Mcw06Yt.png"/>
                     </a>
                 </div>
-                <a href="{{route('product')}}">
+                <a href="{{url('/product')}}">
                     <h3>
                         Kickin with Kraken Tee
                     </h3>

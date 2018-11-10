@@ -1,3 +1,10 @@
+<style rel="text/css">
+    .footer
+    {
+        position: relative;
+        bottom: 0;
+    }
+</style>
 <footer class="footer">
     <div class="row full-width">
         <div class="small-12 medium-4 large-4 columns">
