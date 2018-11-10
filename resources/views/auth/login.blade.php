@@ -1,8 +1,13 @@
 @extends('shared.layouts.master')
 @section('title', 'Login')
+{{--@extends('layouts.app')--}}
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
+<!-- Styles -->
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 @section('content')
-<div class="container">
+    <br>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -45,6 +50,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
+
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
@@ -68,5 +74,5 @@
             </div>
         </div>
     </div>
-</div>
+    <br>
 @endsection
