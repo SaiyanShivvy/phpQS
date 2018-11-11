@@ -18,6 +18,8 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$product->name}}</h5>
                         <p class="card-text">{{$product->description}}</p>
+                        <hr>
+                        <a href="{{route('product.view', $product->id)}}" class="btn btn-primary">View</a>
                     </div>
                     <div class="card-footer">
                         <div class="row">

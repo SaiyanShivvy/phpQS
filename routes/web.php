@@ -52,4 +52,7 @@ Route::get('/products/index', 'ProductsController@adminIndex')->name('admin.prod
 Route::get('/products/create', 'ProductsController@create')->name('product.create');
 Route::post('/products/create', 'ProductsController@createPost')->name('product.create-post');
 
+Route::resource('category','CategoriesController');
+Route::get('/categories/index', 'Controller@adminIndex')->name('admin.products');
+
 // Category

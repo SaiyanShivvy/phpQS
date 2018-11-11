@@ -47,8 +47,9 @@ class ProductsController extends Controller
         // image upload
         $image=$request->image;
         if($image){
-            $imageName=time().'.'.$image->getClientOriginalName();
-            $image->move(public_path('/storage/uploads/'), $imageName);
+            $imageName=$imageName=time(). $image->getClientOriginalName();
+            $image->move('storage/uploads/',$imageName);
+            $formInput['image']=$imageName;
         }
         Products::create($formInput);
         return redirect()->route('admin.products');
