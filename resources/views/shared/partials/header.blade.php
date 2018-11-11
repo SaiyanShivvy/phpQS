@@ -15,6 +15,18 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('index')}}">Home <span class="sr-only">(current)</span></a>
             </li>
+            {{-- Management Dropdown --}}
+            @if (Auth::guard('admin')->check())
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ __('Management') }}<span class="caret"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('admin.products') }}">Products</a>
+                    </div>
+                </li>
+            @endif
+
             <li class="nav-item">
                 <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
             </li>
@@ -25,6 +37,11 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
+                @if (Auth::guard('admin')->check())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.dashboard') }}">Admin Panel</a>
+                    </li>
+                @endif
                 @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -39,7 +56,6 @@
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
-
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             {{--Might not work--}}
                             {{--@if (Auth::guard('admin')->check())--}}

@@ -45,12 +45,11 @@ Route::prefix('admin')->group(function(){
 });
 
 // Products
-Route::get('/products', [
-    'uses' => 'ProductsController@index',
-    'as' => 'store.products'
-]);
+Route::get('/products', 'ProductsController@index')->name('store.products');
+Route::get('/products/view/{id}', 'ProductsController@viewDetails')->name('product.view');
 
-Route::get('/product', [
-    'uses' => 'ProductsController@viewDetails',
-    'as' => 'store.product'
-]);
+Route::get('/products/index', 'ProductsController@adminIndex')->name('admin.products');
+Route::get('/products/create', 'ProductsController@create')->name('product.create');
+Route::post('/products/create', 'ProductsController@createPost')->name('product.create-post');
+
+// Category

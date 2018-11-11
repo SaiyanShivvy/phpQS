@@ -6,23 +6,37 @@
     }
 </style>
 <footer class="footer">
-    <div class="row full-width">
-        <div class="small-12 medium-4 large-4 columns">
-            <i class="fi-laptop"></i>
-            <p>Coded with love by Webdevmatics for educational purpose only</p>
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+                <!-- Content -->
+                <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+                <p>This website was made for Website Application Development - Assignment 2</p>
+                <p>This is a simple purchase order system called "Quality Souvenir's".</p>
+            </div>
+            <!-- Grid column -->
+            <hr class="clearfix w-100 d-md-none">
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+                <!-- Contact details -->
+                <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <p>
+                            139 Carrington Rd</p>
+                    </li>
+                    <li>
+                        <p>
+                            Mount Albert, Auckland 1025</p>
+                    </li>
+                </ul>
         </div>
-        <div class="small-12 medium-4 large-4 columns">
-            <i class="fi-html5"></i>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit impedit consequuntur at! Amet sed itaque nostrum, distinctio eveniet odio, id ipsam fuga quam minima cumque nobis veniam voluptates deserunt!</p>
-        </div>
-
-        <div class="small-6 medium-4 large-4 columns">
-            <h4>Follow Us</h4>
-            <ul class="footer-links">
-                <li><a href="https://github.com/webdevmatics">GitHub</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="https://twitter.com/webdevmatics">Twitter</a></li>
-            </ul>
-        </div>
+        <!-- Grid row -->
     </div>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Coded with love by Shivneel Achari</div>
+    <!-- Copyright -->
 </footer>

@@ -36,31 +36,3 @@
     @endforeach
     <br>
 @endsection()
-
-{{--Foundation Framework to Display Items--}}
-{{--<div class="small-3 columns">--}}
-{{--<div class="item-wrapper">--}}
-{{--<div class="img-wrapper">--}}
-{{--<a class="button expanded add-to-cart">--}}
-{{--Add to Cart--}}
-{{--</a>--}}
-{{--<a href="#">--}}
-{{--<img src="{{$product->image}}"/>--}}
-{{--</a>--}}
-{{--</div>--}}
-{{--<a href="#">--}}
-{{--<h3>--}}
-{{--{{$product->name}}--}}
-{{--</h3>--}}
-{{--</a>--}}
-{{--<h5>--}}
-{{--${{$product->price}}--}}
-{{--</h5>--}}
-{{--<p>--}}
-{{--{{$product->description}}--}}
-{{--</p>--}}
-{{--<p> Displays Category name--}}
-{{--{{$product->category_id}}--}}
-{{--</p>--}}
-{{--</div>--}}
-{{--</div>--}}
