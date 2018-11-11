@@ -13,6 +13,8 @@
         </h2>
         <br>
         <a href="{{url('/products')}}"><button class="button large">Check out the Products</button></a>
+        @component('shared.components.who')
+        @endcomponent
     </section>
     <br/>
     <div class="subheader text-center">
