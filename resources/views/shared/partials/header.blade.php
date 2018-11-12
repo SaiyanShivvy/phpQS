@@ -3,7 +3,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="{{route('index')}}">
-        <img src="{{asset('storage/images/logo.jpg')}}" width="34" height="35" class="d-inline-block align-top" alt="">
+        <img src="{{asset('images/logo.jpg')}}" width="34" height="35" class="d-inline-block align-top" alt="">
         {{ __('Quality Souvenirs') }}
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,8 +83,8 @@
                 @endguest
                 {{-- Shopping Cart --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Shopping Cart
-                        {{--<span class="alert badge">0</span>--}}
+                    <a class="nav-link" href="{{route('product.shoppingCart')}}"><i class="fas fa-shopping-cart"></i> Shopping Cart
+                        <span class="alert badge">{{Session::has('cart') ? Session::get('cart')->totalQty :''}}</span>
                     </a>
                 </li>
         </ul>

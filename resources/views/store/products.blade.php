@@ -27,7 +27,7 @@
                                 <h5>${{$product->price}}</h5>
                             </div>
                             <div class="col">
-                                <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                <a href="{{route('product.addToCart', $product->id)}}" class="btn btn-success btn-block">Add to cart</a>
                             </div>
                         </div>
                     </div>

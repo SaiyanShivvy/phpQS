@@ -1,7 +1,7 @@
 @extends('shared.layouts.master')
 @section('title','Home')
 @section('content')
-    <section class="hero text-center">
+    <section class="hero text-center" style="background-image: url('images/banner1.jpg')">
         <br/>
         <br/>
         <br/>
@@ -22,8 +22,7 @@
            {{--Latest Products--}}
         {{--</h2>--}}
     {{--</div>--}}
-
-    {{--$products = Products::all();--}}
+    {{--@foreach($products = \App\Products::all())--}}
     {{--@foreach($products->chunk(4) as $productChunk)--}}
         {{--<div class="row">--}}
             {{--@foreach($productChunk as $product)--}}
@@ -50,6 +49,7 @@
             {{--@endforeach--}}
         {{--</div>--}}
     {{--@endforeach--}}
-    <br>
+    {{--<br>--}}
+    {{--@endforeach--}}
 @endsection
 

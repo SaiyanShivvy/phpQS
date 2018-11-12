@@ -53,6 +53,13 @@ Route::get('/products/create', 'ProductsController@create')->name('product.creat
 Route::post('/products/create', 'ProductsController@createPost')->name('product.create-post');
 
 Route::resource('category','CategoriesController');
-Route::get('/categories/index', 'Controller@adminIndex')->name('admin.products');
 
-// Category
+// Shopping Cart
+Route::get('/add-to-cart/{id}', 'ProductsController@getAddToCart')->name('product.addToCart');
+Route::get('/reduce/{id}', 'ProductsController@getReduceOne')->name('product.removeOne');
+Route::get('/remove/{id}', 'ProductsController@getRemoveItem')->name('product.removeAll');
+Route::get('/shoppingCart', 'ProductsController@getCart')->name('product.shoppingCart');
+
+//Check out
+Route::get('/checkout', 'ProductsController@getCheckout')->name('checkout');
+Route::post('/checkout', 'ProductsController@postCheckout')->name('checkout');

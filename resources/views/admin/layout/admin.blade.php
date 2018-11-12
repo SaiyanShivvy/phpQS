@@ -22,17 +22,20 @@
         </div>
     @endif
 
-    <div class="row">
-        <div class="col-md-10 display-area">
-            <div class="row text-center">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="content-box-large">
-                        @yield('content')
-                    </div>
-                </div>
-            </div>
-        </div><!--/Display area after sidenav-->
+    <div class="container">
+        @yield('content')
     </div>
+    {{--<div class="row">--}}
+        {{--<div class="col-md-10 display-area">--}}
+            {{--<div class="row text-center">--}}
+                {{--<div class="col-md-10 col-md-offset-1">--}}
+                    {{--<div class="content-box-large">--}}
+                        {{----}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div><!--/Display area after sidenav-->--}}
+    {{--</div>--}}
 
 </div><!--/Page Content-->
 
