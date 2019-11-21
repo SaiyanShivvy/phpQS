@@ -17,6 +17,12 @@ They can also check and manage user order's aswell.
 
 Since this was a project I did while at Unitec: Here is a [Live Demo](http://dochyper.unitec.ac.nz/achars05/php_assignment/public/index.php/)
 > Since, As of 22/11/19; it is still live but I'm not sure if and when it will go down.
+> Though it does seem to have some issues. 
+
+### Notes
+- A User and Admin cannot be logged in at the same time. 
+- An Admin cannot login via the User's Login Interface as there are seperate databases to track the users.
+> I wouldn't say it's completed and polished as this was my first time ever using PHP, Laravel and this type of workflow. 
 
 ## Author
 Shivneel Achari <- That's me
