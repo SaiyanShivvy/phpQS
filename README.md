@@ -16,7 +16,7 @@ They can also check and manage user order's aswell.
 ## Live Demo
 
 Since this was a project I did while at Unitec: Here is a [Live Demo](http://dochyper.unitec.ac.nz/achars05/php_assignment/public/index.php/)
-> Since, I'm not sure if and when it will go down, as of 22/11/19; it is still live.
+> Since, As of 22/11/19; it is still live but I'm not sure if and when it will go down.
 
 ## Author
 Shivneel Achari <- That's me
